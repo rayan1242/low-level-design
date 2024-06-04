@@ -1,0 +1,10 @@
+package betterCode;
+
+import java.util.List;
+
+public void sendNotification(List<notification> Noti){
+    for(notification n:NOti){
+        notification.send();
+    }
+
+}

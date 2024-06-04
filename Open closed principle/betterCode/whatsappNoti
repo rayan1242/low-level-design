@@ -1,0 +1,10 @@
+package betterCode;
+
+import java.util.List;
+
+public class whatsappNoti implements notification {
+    @Override 
+    public void notification(){
+        System.out.println("whatsapp");
+     };
+}
