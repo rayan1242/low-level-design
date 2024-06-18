@@ -1,16 +1,18 @@
 //OCP AND ISP is violated
 package State_Design_Pattern.v1;
 
-import v1.ATMSTATES;
+import State_Design_Pattern.v1.ATMSTATES;
 import java.util.UUID;
 
+public class ATM {
+    
+    
 private final String deviceId;
 
 
 public ATMSTATES state;
 
-public class ATM {
-    
+
     ATM(String deviceId){
         this.deviceId=deviceId;
         this.state=ATMSTATES.READY;
@@ -26,8 +28,8 @@ public class ATM {
         if(this.state.equals(ATMSTATES.CASH_WITHDRAWAL)){
             throw new IllegalArgumentException("Txn in process");
         }
-        String txn=UUID.randomUUID.toString();
-        this.state=ATMSTATES.CASH_READING;
+        String txn=UUID.randomUUID().toString();
+        this.state=ATMSTATES.CARD_READING;
         return txn;
     }
     

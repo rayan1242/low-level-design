@@ -1,11 +1,13 @@
+package State_Design_Pattern.v1;
+
 
 public enum ATMSTATES{
 
     READY,
 
-    CASH_READING,
+    CARD_READING,
 
-    WITDRAWAL_DETAILS,
+    CASH_WITHDRAWAL,
 
     CASH_DISPENSING,
 
