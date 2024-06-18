@@ -1,0 +1,13 @@
+
+public enum ATMSTATES{
+
+    READY,
+
+    CASH_READING,
+
+    WITDRAWAL_DETAILS,
+
+    CASH_DISPENSING,
+
+    CARD_EJECTING
+}
