@@ -1,36 +1,44 @@
 package State_Design_Pattern.v2;
 
 public class WithdrawalReadingState implements ATMStates{
+
+    private final ATM atm;
+
+    public WithdrawalReadingState(ATM atm){
+        this.atm=atm;
+    }
+
+
     @Override
-    String init (){
+    public String init (){
         return null;
     }
 
     @Override
-    boolean cancelTxn(String txn){
+    public boolean cancelTxn(String txn){
         return true;
     }
 
     @Override
-    void ejectCard(){
-        return true;
-
-    }
-
-    @Override
-    boolean readCard(String txn,String cardType,String cardNum,String cardCVV){
+    public void ejectCard(){
         return true;
 
     }
 
     @Override
-    boolean readWithdrawDetails(float amount,String txn,int pin){
+    public boolean readCard(String txn,String cardType,String cardNum,String cardCVV){
         return true;
 
     }
 
     @Override
-    boolean dispenseCash(String txn){
+    public boolean readWithdrawDetails(float amount,String txn,int pin){
+        return true;
+
+    }
+
+    @Override
+    public boolean dispenseCash(String txn){
         return true;
 
     }

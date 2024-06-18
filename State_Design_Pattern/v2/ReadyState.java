@@ -14,7 +14,7 @@ public class ReadyState implements ATMStates{
     @Override
     public String init (){
         String txn=UUID.randomUUID().toString();
-        this.atm.changeState(new CardReadingState(this.atm));
+        this.atm.changeState(StateFactory.getState(ATMStateEnum.CARD_READING, atm));
         return null;
     }
 

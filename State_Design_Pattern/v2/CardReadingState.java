@@ -16,8 +16,8 @@ public class CardReadingState implements ATMStates{
     @Override
     public boolean cancelTxn(String txn){
        // logic to cancel the transaction
-        this.atm.changeState(new ReadyState(this.atm));
-        return true;
+       this.atm.changeState(StateFactory.getState(ATMStateEnum.READY, atm));
+       return true;
     }
 
     @Override
